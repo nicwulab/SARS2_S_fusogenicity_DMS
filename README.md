@@ -33,7 +33,7 @@
 1. Merge overlapping paired-end reads using [PEAR](https://github.com/tseemann/PEAR)   
 ``pear -f [FASTQ FILE FOR FORWARD READ] -r [FASTQ FILE FOR FORWARD READ] -o [OUTPUT FASTQ FILE]``
     - It can also be run using [./script/merge_reads.py](./script/merge_reads.py)
-    - Output files should be placed in the fastq_merged/ folder and named as described in [./doc/filename_merged_fastq.tsv](./doc/filename_merged_fastq.tsv)
+    - Output files should be placed in the fastq_merged/ folder and named as described in [./data/filename_merged_fastq.tsv](./data/filename_merged_fastq.tsv)
 
 2. Counting variants based on nucleotide sequences   
 ``python3 script/S2_HR1_fastq2count.py``   
