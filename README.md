@@ -29,7 +29,7 @@
     - Output file:
       - [./data/barcodes.tsv](./data/barcodes.tsv)
 
-### Calculating experssion score and fusion score from DMS data
+### I. Calculating experssion score and fusion score from DMS data
 1. Merge overlapping paired-end reads using [PEAR](https://github.com/tseemann/PEAR)   
 ``pear -f [FASTQ FILE FOR FORWARD READ] -r [FASTQ FILE FOR FORWARD READ] -o [OUTPUT FASTQ FILE]``
     - It can also be run using [./script/merge_reads.py](./script/merge_reads.py)
@@ -58,3 +58,23 @@
     - Output file:
       - [./result/S2_HR1_DMS_scores.tsv](./result/S2_HR1_DMS_scores.tsv)
       - [./result/S2_HR1_DMS_scores_by_resi.tsv](./result/S2_HR1_DMS_scores_by_resi.tsv)
+
+### II. Checking data quality 
+1. Plot correlation between replicates and compare silent/missense/nonsense   
+``Rscript script/plot_QC.R``
+    - Input file:
+      - [./result/S2_HR1_DMS_scores.tsv](./result/S2_HR1_DMS_scores.tsv)
+    - Output files:
+      - [./graph/QC_replicate_exp12.png](./graph/QC_replicate_exp12.png)
+      - [./graph/QC_replicate_exp13.png](./graph/QC_replicate_exp13.png)
+      - [./graph/QC_replicate_exp23.png](./graph/QC_replicate_exp23.png)
+      - [./graph/QC_replicate_fus.png](./graph/QC_replicate_fus.png)
+      - [./graph/Exp_by_class.png](./graph/Exp_by_class.png)
+      - [./graph/Fus_by_class.png](./graph/Fus_by_class.png)
+
+2. Plot heatmap for the expression scores of individual mutations   
+``Rscript script/plot_score_heatmap``
+    - Input file:
+      - [./result/S2_HR1_DMS_scores.tsv](./result/S2_HR1_DMS_scores.tsv)
+    - Ouput file:
+      - [./graph/S2_HR1_fus_heatmap.png](./graph/S2_HR1_fus_heatmap.png)
