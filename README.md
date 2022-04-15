@@ -78,3 +78,12 @@
       - [./result/S2_HR1_DMS_scores.tsv](./result/S2_HR1_DMS_scores.tsv)
     - Ouput file:
       - [./graph/S2_HR1_fus_heatmap.png](./graph/S2_HR1_fus_heatmap.png)
+
+### III. Identify prefusion-stabilizing mutations
+1. Plot the relationship between fusion score and expression score
+``script/plot_exp_vs_fus.R``
+    - Input file:
+      - [./result/S2_HR1_DMS_scores.tsv](./result/S2_HR1_DMS_scores.tsv)
+    - Output file: 
+      - [./graph/Exp_vs_fus.png](./graph/Exp_vs_fus.png)
+      - [./graph/Exp_vs_fus_reidual.png](./graph/Exp_vs_fus_reidual.png)
