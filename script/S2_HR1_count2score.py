@@ -13,7 +13,9 @@ def exp_score_calculate(df, rep, freq_cutoff):
                  df['bin2_'+rep+'_freq']*0.75  + df['bin3_'+rep+'_freq']*1
     exp_norm_factor = df['bin0_'+rep+'_freq'] + df['bin1_'+rep+'_freq'] + \
                       df['bin2_'+rep+'_freq'] + df['bin3_'+rep+'_freq']
+    avg_freq = exp_norm_factor/4
     df['exp_weight_'+rep] = exp_weight/exp_norm_factor
+    df['avg_freq_'+rep] = avg_freq
     df_high_freq = df[df['input_freq'] >= freq_cutoff]
     w_summary = df_high_freq.groupby('mut_class')['exp_weight_'+rep].mean()
     w_summary = w_summary.reset_index()
@@ -49,6 +51,7 @@ def read_count_data(count_file, freq_cutoff):
     df = fusion_score_calculate(df, 'rep2', freq_cutoff)
     df['exp_score'] = (df['exp_score_rep1'] + df['exp_score_rep2'] + df['exp_score_rep3'])/3
     df['fus_score'] = (df['fus_score_rep1'] + df['fus_score_rep2'])/2
+    df['avg_freq'] = (df['avg_freq_rep1'] + df['avg_freq_rep2'] + df['avg_freq_rep3'])/3
     return (df)
 
 def main():

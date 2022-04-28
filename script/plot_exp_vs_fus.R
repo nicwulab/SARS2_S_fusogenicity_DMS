@@ -63,9 +63,9 @@ plot_exp_vs_fus <- function(df, df_special, df_others, df_WT, graphname, ylab){
     }
   palette <- c('grey',qualpal(n = 5, list(h = c(0, 360), s = c(0.4, 0.6), l = c(0.5, 0.85)))$hex)
   p <-  ggplot() +
-          geom_point(data=df_others, aes(x=exp_score, y=fus_score, size=log10(input_freq), color='grey'), alpha=0.4, pch=16) +
-          geom_point(data=df_WT, aes(x=exp_score, y=fus_score, size=log10(input_freq), color='WT'), alpha=0.7, pch=16) +
-          geom_point(data=df_special, aes(x=exp_score, y=fus_score, size=log10(input_freq), color=grouping), alpha=0.7, pch=16) +
+          geom_point(data=df_others, aes(x=exp_score, y=fus_score, size=log10(avg_freq), color='grey'), alpha=0.4, pch=16) +
+          geom_point(data=df_WT, aes(x=exp_score, y=fus_score, size=log10(avg_freq), color='WT'), alpha=0.7, pch=16) +
+          geom_point(data=df_special, aes(x=exp_score, y=fus_score, size=log10(avg_freq), color=grouping), alpha=0.7, pch=16) +
           scale_color_manual(values=palette,drop=FALSE) +
           geom_text_repel(data=df_special, aes(x=exp_score, y=fus_score,label=mut),
                           color="black", min.segment.length=0, segment.size=0.2, size=2, force=15, force_pull=1,
