@@ -49,12 +49,12 @@
       - [./Fasta/HR1_ref_seq.fa](./Fasta/HR1_ref_seq.fa)
       - result/S2_HR1_DMS_count_nuc.tsv
     - Output file:
-      - result/S2_HR1_DMS_count_aa.tsv
+      - [./result/S2_HR1_DMS_count_aa.tsv](./result/S2_HR1_DMS_count_aa.tsv)
 
 4. Compute expression score and fusion score   
 ``python3 script/S2_HR1_count2score.py``   
     - Input files:
-      - result/S2_HR1_DMS_count_aa.tsv
+      - [./result/S2_HR1_DMS_count_aa.tsv](./result/S2_HR1_DMS_count_aa.tsv)
     - Output file:
       - [./result/S2_HR1_DMS_scores.tsv](./result/S2_HR1_DMS_scores.tsv)
       - [./result/S2_HR1_DMS_scores_by_resi.tsv](./result/S2_HR1_DMS_scores_by_resi.tsv)
