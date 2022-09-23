@@ -1,0 +1,11 @@
+# Resfile to calculate stability of D994Q in SARS-CoV-2 spike.
+
+NATAA
+EX 1 EX 2
+USE_INPUT_SC
+start
+
+# Mutate residue D994 into Q for each chain.
+946 A PIKAA Q
+2044 B PIKAA Q
+3142 C PIKAA Q
