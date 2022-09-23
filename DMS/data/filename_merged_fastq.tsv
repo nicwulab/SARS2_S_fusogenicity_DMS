@@ -1,0 +1,18 @@
+filename	description
+Input.assembled.fastq	Inputlibrary
+Bin_0_rep1.assembled.fastq	Expression sort bin 0 (replicate 1)
+Bin_0_rep2.assembled.fastq	Expression sort bin 0 (replicate 2)
+Bin_0_rep3.assembled.fastq	Expression sort bin 0 (replicate 3)
+Bin_1_rep1.assembled.fastq	Expression sort bin 1 (replicate 1)
+Bin_1_rep2.assembled.fastq	Expression sort bin 1 (replicate 2)
+Bin_1_rep3.assembled.fastq	Expression sort bin 1 (replicate 3)
+Bin_2_rep1.assembled.fastq	Expression sort bin 2 (replicate 1)
+Bin_2_rep2.assembled.fastq	Expression sort bin 2 (replicate 2)
+Bin_2_rep3.assembled.fastq	Expression sort bin 2 (replicate 3)
+Bin_3_rep1.assembled.fastq	Expression sort bin 3 (replicate 1)
+Bin_3_rep2.assembled.fastq	Expression sort bin 3 (replicate 2)
+Bin_3_rep3.assembled.fastq	Expression sort bin 3 (replicate 3)
+mNG2_neg_rep1.assembled.fastq	Fusion sort negative gate (replicate 1)
+mNG2_neg_rep2.assembled.fastq	Fusion sort negative gate (replicate 2)
+mNG2_pos_rep1.assembled.fastq	Fusion sort positive gate (replicate 1)
+mNG2_pos_rep2.assembled.fastq	Fusion sort positive gate (replicate 2)
