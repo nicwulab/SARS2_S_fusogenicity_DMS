@@ -5,5 +5,6 @@ The folders in this repository correspond to the following experiments:
 * DMS: deep mutational scanning
 * DSF: differential scanning fluorimetry
 * chromatogram: size-exclusion chromatography
+* conservation: sequence conservation analysis
 * cytometry: flow cytometry validation of expression and fusion
 * rosetta: simulation of D994Q mutation using Rosetta
