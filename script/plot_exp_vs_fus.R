@@ -61,7 +61,8 @@ plot_exp_vs_fus <- function(df, df_special, df_others, df_WT, graphname, ylab){
                      mutate(nudge_x=mapply(x_nudging_residual, mut)) %>%
                      mutate(nudge_y=mapply(y_nudging_residual, mut))
     }
-  palette <- c('grey',qualpal(n = 5, list(h = c(0, 360), s = c(0.4, 0.6), l = c(0.5, 0.85)))$hex)
+  #palette <- c('grey',qualpal(n = 5, list(h = c(0, 360), s = c(0.4, 0.6), l = c(0.5, 0.85)))$hex)
+  palette <- c('grey','#92DDAE','#7775D1','#BC4E47',qualpal(n = 5, list(h = c(0, 360), s = c(0.4, 0.6), l = c(0.5, 0.85)))$hex[1],'#DFBBE7')
   p <-  ggplot() +
           geom_point(data=df_others, aes(x=exp_score, y=fus_score, size=log10(avg_freq), color='grey'), alpha=0.4, pch=16) +
           geom_point(data=df_WT, aes(x=exp_score, y=fus_score, size=log10(avg_freq), color='WT'), alpha=0.7, pch=16) +
@@ -116,4 +117,4 @@ df <- mutate(df, fus_score=residual)
 df_special <- mutate(df_special, fus_score=residual)
 df_WT <- mutate(df_WT, fus_score=residual)
 df_others <- mutate(df_others, fus_score=residual)
-plot_exp_vs_fus(df, df_special, df_others, df_WT, 'graph/Exp_vs_fus_reidual.png', 'Residual')
+plot_exp_vs_fus(df, df_special, df_others, df_WT, 'graph/Exp_vs_fus_residual.png', 'Residual')
