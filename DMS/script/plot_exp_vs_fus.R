@@ -16,17 +16,20 @@ library(ggforce)
 require(cowplot)
 
 x_nudging_normal <- function(label){
+  if (label == 'A899P'){return (0.1)}
   if (label == 'D994E'){return (0.5)}
   if (label == 'D994Q'){return (-1.2)}
   if (label == 'Q1005R'){return (-1)}
+  if (label == 'D950N'){return (-0.5)}
   if (label == 'Q954H'){return (-0.5)}
   else{return (0)}
   }
 
 y_nudging_normal <- function(label){
+  if (label == 'A899P'){return (-1)}
   if (label == 'D994E'){return (-1)}
   if (label == 'D994Q'){return (-0.5)}
-  if (label == 'D950N'){return (-0.5)}
+  if (label == 'D950N'){return (0)}
   if (label == 'Q954H'){return (-0.5)}
   else{return (0)}
   }
