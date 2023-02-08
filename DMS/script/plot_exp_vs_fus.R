@@ -59,7 +59,7 @@ plot_exp_vs_fus <- function(df, df_special, df_others, df_WT, graphname, ylab){
                      mutate(nudge_x=mapply(x_nudging_normal, mut)) %>%
                      mutate(nudge_y=mapply(y_nudging_normal, mut))
     }
-  if (ylab == 'Residual'){
+  if (ylab == 'Adjusted fusion score'){
     label_table <- df_special %>%
                      mutate(nudge_x=mapply(x_nudging_residual, mut)) %>%
                      mutate(nudge_y=mapply(y_nudging_residual, mut))
@@ -120,4 +120,4 @@ df <- mutate(df, fus_score=residual)
 df_special <- mutate(df_special, fus_score=residual)
 df_WT <- mutate(df_WT, fus_score=residual)
 df_others <- mutate(df_others, fus_score=residual)
-plot_exp_vs_fus(df, df_special, df_others, df_WT, 'graph/Exp_vs_fus_residual.png', 'Residual')
+plot_exp_vs_fus(df, df_special, df_others, df_WT, 'graph/Exp_vs_fus_residual.png', 'Adjusted fusion score')
